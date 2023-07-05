@@ -95,10 +95,9 @@ module.exports = {
       },
     }),
     new Dotenv({
-      path:
-                process.env.NODE_ENV === 'production'
-                  ? path.join(__dirname, './.env.pro')
-                  : path.join(__dirname, './.env.dev'),
+      path: process.env.NODE_ENV === 'production'
+        ? path.join(__dirname, './.env.pro')
+        : path.join(__dirname, './.env.dev'),
       allowEmptyValues: true,
       expand: true,
     }),
